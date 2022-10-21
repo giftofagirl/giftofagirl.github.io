@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="testHua.css">
+    <script src="../../jq/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div id="testWZ">
+        <h2>
+            <span style="--i:1;">H</span>
+            <span style="--i:2;">a</span>
+            <span style="--i:3;">p</span>
+            <span style="--i:4;">p</span>
+            <span style="--i:5;">y</span>
+            <span style="--i:6;margin-left: 5vw;">D</span>
+            <span style="--i:7;">i</span>
+            <span style="--i:8;">r</span>
+            <span style="--i:9;">t</span>
+            <span style="--i:10;">h</span>
+            <span style="--i:11;">d</span>
+            <span style="--i:12;">a</span>
+            <span style="--i:13;">y</span>
+        </h2>
+    </div>
+
+    <div id="zhu">
+        <div id="fire1"></div>
+        <div id="fire2"></div>
+        <div id="fire3"></div>
+        <div id="fire4"></div>
+        <div id="fire5"></div>
+    </div>
+    <div id="yuan1">
+        <div id="yuan2">
+            <div id="yuan3"></div>
+        </div>
+    </div>
+    <div id="pen3"></div>
+    <div id="pen2"></div>
+    <div id="pen1"></div>
+<script>
+  $(function (){
+      const pen1 = window.setInterval(function() {
+          let foot1 = document.getElementById("pen1");
+          foot1.style.width = "380px";
+          clearInterval(pen1);
+      }, 100);
+      const pen2 = window.setTimeout(function() {
+          let foot1 = document.getElementById("pen2");
+          foot1.style.width = "350px";
+          clearInterval(pen2);
+      }, 4000);
+      const pen3 = window.setTimeout(function() {
+          let foot1 = document.getElementById("pen3");
+          foot1.style.width = "300px";
+          clearInterval(pen3);
+      }, 4000);
+
+      const interval4 = window.setInterval(function() {
+          let yuan1 = document.getElementById("yuan1");
+          yuan1.style.border="3px yellow solid";
+          clearInterval(interval4)
+      }, 7000);
+      const interval5 = window.setInterval(function() {
+          let foot4 = document.getElementById("yuan1");
+          let foot5 = document.getElementById("yuan2");
+          let foot6 = document.getElementById("yuan3");
+          foot5.style.borderColor="yellow";
+          foot4.style.backgroundColor="yellow";
+          foot6.style.backgroundColor="yellow";
+          foot6.style.borderColor="yellow";
+          clearInterval(interval5)
+      }, 7000);
+      const interval6 = window.setInterval(function() {
+          let foot4 = document.getElementById("yuan2");
+          foot4.style.width="256px";
+          foot4.style.border="3px #77ccff solid";
+          clearInterval(interval6)
+      },10000);
+      const interval7 = window.setInterval(function() {
+          let foot4 = document.getElementById("yuan2");
+          let foot6 = document.getElementById("yuan3");
+          foot6.style.backgroundColor="#77ccff";
+          foot6.style.borderColor="#77ccff";
+          foot4.style.backgroundColor="#77ccff";
+          clearInterval(interval7)
+      }, 12000);
+      const interval8 = window.setInterval(function() {
+          let foot4 = document.getElementById("yuan3");
+          foot4.style.width="253px";
+          foot4.style.border="3px #EBEBEB solid";
+          clearInterval(interval8)
+      },15000);
+      const interval9 = window.setInterval(function() {
+          let foot6 = document.getElementById("yuan3");
+          foot6.style.backgroundColor="#EBEBEB";
+          clearInterval(interval9)
+      }, 16000);
+      const interval10 = window.setInterval(function() {
+          let fire1 = document.getElementById("fire1");
+          fire1.style.height="50px";
+          let fire2 = document.getElementById("fire2");
+          fire2.style.height="50px";
+          let fire3 = document.getElementById("fire3");
+          fire3.style.height="50px";
+          let fire4 = document.getElementById("fire4");
+          fire4.style.height="50px";
+          let fire5 = document.getElementById("fire5");
+          fire5.style.height="50px";
+          clearInterval(interval10)
+      },19000);
+
+
+  })
+
+</script>
+</body>
+</html>
