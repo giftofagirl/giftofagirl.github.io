@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="lx_set.mapper.StudentMapper">
+
+    <insert id="addStudent" parameterType="lx_set.pojo.Student">
+        insert into user_student(u_id,u_name,u_gender,u_clazz,u_nation,u_phone,u_qq_num,u_email) values (#{id},#{name},#{gender},#{clazz},#{nation},#{phone},#{qq_num},#{email})
+    </insert>
+
+   <delete id="delStudent" parameterType="lx_set.pojo.Student">
+       delete  from user_student where u_id=#{id}
+   </delete>
+
+    <update id="updateStudent" parameterType="lx_set.pojo.Student">
+        update user_student set u_name=#{name},u_gender=#{gender},u_clazz=#{clazz},u_nation=#{nation},u_phone=#{phone},u_qq_num=#{qq_num},u_email=#{email} where u_id=#{id}
+    </update>
+
+
+    <resultMap id="show_stu" type="lx_set.pojo.Student">
+        <id property="id" column="u_id"/>
+        <result property="name" column="u_name"/>
+        <result property="gender" column="u_gender"/>
+        <result property="clazz" column="u_clazz"/>
+        <result property="nation" column="u_nation"/>
+        <result property="phone" column="u_phone"/>
+        <result property="qq_num" column="u_qq_num"/>
+        <result property="email" column="u_email"/>
+    </resultMap>
+    <select id="StudentList" resultMap="show_stu">
+        select * from user_student
+    </select>
+
+    <select id="queryStudent" resultMap="show_stu">
+        select * from user_student where u_id=#{id}
+    </select>
+
+</mapper>
